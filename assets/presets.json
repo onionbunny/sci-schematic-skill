@@ -1,0 +1,61 @@
+{
+  "schema": "sci_fig.presets/1.0",
+  "note": "期刊/模板导出预设。width_mm 为单栏宽，double_mm 为跨栏宽。raster_dpi 为位图最低分辨率；矢量图(PDF/EPS/SVG)不受 DPI 限制但内部位图仍需达标。font_min_pt/stroke_min_pt 为可接受下限。具体投稿前以目标期刊最新作者指南为准，本预设为通用基线。",
+  "presets": {
+    "nature": {
+      "single_mm": 89, "double_mm": 183, "max_depth_mm": 247,
+      "raster_dpi": 300, "line_art_dpi": 600,
+      "color_space": "sRGB", "font_families": ["Arial", "Helvetica", "Liberation Sans"],
+      "font_min_pt": 5, "font_body_pt": 7, "stroke_min_pt": 0.25,
+      "formats": ["pdf", "eps", "svg", "tiff", "png"],
+      "vector_preferred": true
+    },
+    "science": {
+      "single_mm": 55, "double_mm": 120, "max_depth_mm": 235,
+      "raster_dpi": 300, "line_art_dpi": 600,
+      "color_space": "sRGB", "font_families": ["Arial", "Helvetica", "Liberation Sans"],
+      "font_min_pt": 5, "font_body_pt": 7, "stroke_min_pt": 0.25,
+      "formats": ["pdf", "eps", "ai", "tiff"],
+      "vector_preferred": true
+    },
+    "cell": {
+      "single_mm": 90, "double_mm": 180, "max_depth_mm": 240,
+      "raster_dpi": 300, "line_art_dpi": 600,
+      "color_space": "sRGB", "font_families": ["Arial", "Helvetica", "Liberation Sans"],
+      "font_min_pt": 5, "font_body_pt": 7, "stroke_min_pt": 0.25,
+      "formats": ["pdf", "eps", "tiff", "png"],
+      "vector_preferred": true
+    },
+    "plos": {
+      "single_mm": 89, "double_mm": 183, "max_depth_mm": 240,
+      "raster_dpi": 300, "line_art_dpi": 600,
+      "color_space": "sRGB", "font_families": ["Arial", "Liberation Sans"],
+      "font_min_pt": 6, "font_body_pt": 8, "stroke_min_pt": 0.3,
+      "formats": ["tiff", "eps", "pdf", "png"],
+      "vector_preferred": false
+    },
+    "default_print": {
+      "single_mm": 120, "double_mm": 180, "max_depth_mm": 250,
+      "raster_dpi": 300, "line_art_dpi": 600,
+      "color_space": "sRGB", "font_families": ["Liberation Sans", "DejaVu Sans", "Arial"],
+      "font_min_pt": 6, "font_body_pt": 8, "stroke_min_pt": 0.3,
+      "formats": ["svg", "pdf", "png", "tiff"],
+      "vector_preferred": true
+    },
+    "screen": {
+      "single_mm": 160, "double_mm": 240, "max_depth_mm": 180,
+      "raster_dpi": 150, "line_art_dpi": 300,
+      "color_space": "sRGB", "font_families": ["Liberation Sans", "DejaVu Sans"],
+      "font_min_pt": 8, "font_body_pt": 10, "stroke_min_pt": 0.4,
+      "formats": ["svg", "png", "pdf"],
+      "vector_preferred": true
+    }
+  },
+  "unit_rules": {
+    "mm_per_pt": 0.3527777778,
+    "pt_per_mm": 2.834645669,
+    "px_per_inch_reference": 96,
+    "allowed_color_spaces": ["sRGB", "RGB"],
+    "forbidden_for_raster": ["CMYK", "P", "LA", "RGBA"]
+  }
+}

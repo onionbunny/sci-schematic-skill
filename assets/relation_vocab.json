@@ -1,0 +1,105 @@
+{
+  "schema": "sci_fig.relation_vocab/1.0",
+  "note": "受控关系词表。glyph 决定箭头端头，dash 决定线型，polarity 为符号效应。方向一律 source -> target。SBGN 列给出与系统生物学图形记号法的对应，便于审稿人核对。",
+  "relations": {
+    "activation": {
+      "glyph": "arrow", "dash": "solid", "polarity": "positive", "sbgn": "stimulation",
+      "label_en": "activation", "label_zh": "激活/促进",
+      "triggers": ["activates", "activate", "promotes", "promote", "induces", "induce", "stimulates", "upregulates", "drives", "enhances", "激活", "促进", "诱导", "上调", "刺激", "增强", "推动"]
+    },
+    "inhibition": {
+      "glyph": "tbar", "dash": "solid", "polarity": "negative", "sbgn": "inhibition",
+      "label_en": "inhibition", "label_zh": "抑制",
+      "triggers": ["inhibits", "inhibit", "suppresses", "suppress", "represses", "downregulates", "blocks", "antagonizes", "抑制", "阻遏", "下调", "阻断", "拮抗", "封闭"]
+    },
+    "phosphorylation": {
+      "glyph": "arrow_circle", "dash": "solid", "polarity": "positive", "sbgn": "stimulation (phosphorylation)",
+      "label_en": "phosphorylation", "label_zh": "磷酸化",
+      "triggers": ["phosphorylates", "phosphorylate", "phosphorylation", "adds phosphate to", "磷酸化"]
+    },
+    "dephosphorylation": {
+      "glyph": "arrow_circle", "dash": "solid", "polarity": "negative", "sbgn": "stimulation (dephosphorylation)",
+      "label_en": "dephosphorylation", "label_zh": "去磷酸化",
+      "triggers": ["dephosphorylates", "dephosphorylation", "removes phosphate from", "去磷酸化"]
+    },
+    "ubiquitination": {
+      "glyph": "arrow_circle", "dash": "solid", "polarity": "negative", "sbgn": "stimulation (ubiquitination)",
+      "label_en": "ubiquitination", "label_zh": "泛素化",
+      "triggers": ["ubiquitinates", "ubiquitination", "ubiquitylates", "泛素化"]
+    },
+    "binding": {
+      "glyph": "line", "dash": "solid", "polarity": "neutral", "sbgn": "binding/association",
+      "label_en": "binding", "label_zh": "结合/组装",
+      "triggers": ["binds", "bind", "associates with", "forms complex with", "interacts with", "complexes with", "结合", "相互作用", "组装", "形成复合物", "互作"]
+    },
+    "dissociation": {
+      "glyph": "line", "dash": "dashed", "polarity": "neutral", "sbgn": "dissociation",
+      "label_en": "dissociation", "label_zh": "解离",
+      "triggers": ["dissociates from", "dissociation", "unbinds", "解离", "解聚"]
+    },
+    "transcription": {
+      "glyph": "open_arrow", "dash": "dashed", "polarity": "neutral", "sbgn": "stimulation (transcription)",
+      "label_en": "transcription", "label_zh": "转录",
+      "triggers": ["transcribes", "transcription of", "is transcribed into", "drives transcription of", "转录"]
+    },
+    "translation": {
+      "glyph": "open_arrow", "dash": "dashed", "polarity": "neutral", "sbgn": "stimulation (translation)",
+      "label_en": "translation", "label_zh": "翻译",
+      "triggers": ["translates", "translation of", "is translated into", "翻译"]
+    },
+    "translocation": {
+      "glyph": "open_arrow", "dash": "dashed", "polarity": "neutral", "sbgn": "translocation",
+      "label_en": "translocation", "label_zh": "转位/转运",
+      "triggers": ["translocates", "moves to", "migrates to", "is imported into", "is exported to", "translocation", "转位", "转运", "迁移", "进入", "移出"]
+    },
+    "catalysis": {
+      "glyph": "circle", "dash": "solid", "polarity": "positive", "sbgn": "catalysis",
+      "label_en": "catalysis", "label_zh": "催化",
+      "triggers": ["catalyzes", "catalyse", "catalysis", "催化"]
+    },
+    "degradation": {
+      "glyph": "arrow", "dash": "dashed", "polarity": "negative", "sbgn": "stimulation (degradation)",
+      "label_en": "degradation", "label_zh": "降解",
+      "triggers": ["degrades", "degradation of", "targets for degradation", "is degraded by", "降解", "分解"]
+    },
+    "secretion": {
+      "glyph": "open_arrow", "dash": "solid", "polarity": "neutral", "sbgn": "translocation (secretion)",
+      "label_en": "secretion", "label_zh": "分泌",
+      "triggers": ["secretes", "secretion of", "is secreted", "releases", "分泌", "释放"]
+    },
+    "methylation": {
+      "glyph": "arrow_circle", "dash": "solid", "polarity": "contextual", "sbgn": "stimulation (methylation)",
+      "label_en": "methylation", "label_zh": "甲基化",
+      "triggers": ["methylates", "methylation", "甲基化"]
+    },
+    "acetylation": {
+      "glyph": "arrow_circle", "dash": "solid", "polarity": "contextual", "sbgn": "stimulation (acetylation)",
+      "label_en": "acetylation", "label_zh": "乙酰化",
+      "triggers": ["acetylates", "acetylation", "乙酰化"]
+    },
+    "cleavage": {
+      "glyph": "arrow", "dash": "solid", "polarity": "contextual", "sbgn": "stimulation (cleavage)",
+      "label_en": "cleavage", "label_zh": "剪切/切割",
+      "triggers": ["cleaves", "cleavage of", "cuts", "proteolyzes", "剪切", "切割", "酶切"]
+    },
+    "indirect_effect": {
+      "glyph": "arrow", "dash": "dashed", "polarity": "positive", "sbgn": "stimulation (indirect)",
+      "label_en": "indirect effect", "label_zh": "间接作用",
+      "triggers": ["indirectly activates", "may regulate", "is associated with increased", "indirectly", "间接激活", "可能调控", "间接"]
+    },
+    "modulation": {
+      "glyph": "open_arrow", "dash": "dashed", "polarity": "contextual", "sbgn": "modulation",
+      "label_en": "modulation", "label_zh": "调节(方向不明)",
+      "triggers": ["modulates", "regulates (direction unspecified)", "调节", "调控(方向未明)"]
+    }
+  },
+  "glyph_definitions": {
+    "arrow": "实心三角箭头，定向正效应/过程",
+    "tbar": "平头 T 形端头，抑制/负效应",
+    "open_arrow": "空心三角箭头，转录/翻译/转运等信息流",
+    "circle": "端头空心圆，催化",
+    "arrow_circle": "箭头加圆点，修饰类反应（磷酸化/泛素化等）",
+    "line": "无端头直线，结合/组装（无方向）",
+    "diamond": "菱形端头，预留：条件依赖"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "sci_fig.palettes/1.0",
+  "note": "分类色板全部为 sRGB 十六进制。okabe_ito 为色盲安全首选（Nature Methods 推荐）。分类数目必须与图例项数严格一致，超出色板长度时校验报错，禁止自行复用相近色。",
+  "palettes": {
+    "okabe_ito": {
+      "colorblind_safe": true,
+      "max_classes": 8,
+      "colors": ["#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#000000"],
+      "usage": "分类首选，黑白打印仍可区分"
+    },
+    "lancet": {
+      "colorblind_safe": false,
+      "max_classes": 6,
+      "colors": ["#00468B", "#ED0000", "#42B540", "#0099B4", "#925E9F", "#FDAF91"],
+      "usage": "医学期刊风格分类"
+    },
+    "nature_qual": {
+      "colorblind_safe": false,
+      "max_classes": 8,
+      "colors": ["#E64B35", "#4DBBD5", "#00A087", "#3C5488", "#F39B7F", "#8491B4", "#91D1C2", "#DC0000"],
+      "usage": "NPG 风格分类"
+    },
+    "grey_safe": {
+      "colorblind_safe": true,
+      "max_classes": 4,
+      "colors": ["#1A1A1A", "#666666", "#999999", "#CCCCCC"],
+      "usage": "单色印刷/灰度图"
+    }
+  },
+  "semantic_colors": {
+    "activation": "#0072B2",
+    "inhibition": "#D55E00",
+    "neutral_edge": "#333333",
+    "container_fill": "#F2F2F2",
+    "container_stroke": "#7F7F7F",
+    "node_fill": "#FFFFFF",
+    "node_stroke": "#222222",
+    "text": "#111111",
+    "background": "#FFFFFF"
+  },
+  "sequential_single_hue": {
+    "note": "数值型连续映射使用，禁止用于分类；与数据归一化方式一并写入 spec.datasets.mapping",
+    "blues": ["#F7FBFF", "#C6DBEF", "#6BAED6", "#2171B5", "#08306B"]
+  }
+}

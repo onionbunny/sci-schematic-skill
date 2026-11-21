@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "case_id": "EXAMPLE_MINIMAL",
+  "figure": {
+    "id": "figure_min",
+    "title": "Minimal A-B-C pathway (labeled example)",
+    "type": "mechanism",
+    "preset": "default_print",
+    "canvas": {
+      "width_mm": 120,
+      "height_mm": 70,
+      "dpi": 300,
+      "color_space": "sRGB",
+      "background": "#FFFFFF",
+      "margin_mm": 8
+    },
+    "font": {
+      "family": "Liberation Sans",
+      "size_pt": 8,
+      "title_pt": 10,
+      "label_pt": 7
+    },
+    "stroke": {
+      "width_pt": 1.0
+    },
+    "title_render": {
+      "lines": [
+        "Minimal A-B-C pathway (labeled example)"
+      ],
+      "size_pt": 10,
+      "baselines": [
+        10.9
+      ],
+      "band_mm": 3.6
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "kind": "text",
+      "path": "materials/background.txt",
+      "name": "background.txt",
+      "locator": "sentence 1",
+      "quote": "Kinase A activates protein B, and protein B inhibits the output gene C."
+    }
+  ],
+  "entities": [
+    {
+      "id": "E1",
+      "label": "Kinase A",
+      "type": "enzyme",
+      "source_refs": [
+        "S1"
+      ],
+      "confidence": "high",
+      "size": {
+        "w_mm": 22,
+        "h_mm": 9
+      },
+      "position": {
+        "x_mm": 8,
+        "y_mm": 32.3
+      }
+    },
+    {
+      "id": "E2",
+      "label": "Protein B",
+      "type": "protein",
+      "source_refs": [
+        "S1"
+      ],
+      "confidence": "high",
+      "size": {
+        "w_mm": 22,
+        "h_mm": 9
+      },
+      "position": {
+        "x_mm": 36,
+        "y_mm": 32.3
+      }
+    },
+    {
+      "id": "E3",
+      "label": "Gene C",
+      "type": "gene",
+      "source_refs": [
+        "S1"
+      ],
+      "confidence": "high",
+      "size": {
+        "w_mm": 20,
+        "h_mm": 9
+      },
+      "position": {
+        "x_mm": 64,
+        "y_mm": 32.3
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "R1",
+      "source": "E1",
+      "target": "E2",
+      "relation": "activation",
+      "source_refs": [
+        "S1"
+      ],
+      "confidence": "high",
+      "is_feedback": false,
+      "route": {
+        "points": [
+          [
+            30,
+            36.8
+          ],
+          [
+            33.0,
+            36.8
+          ],
+          [
+            33.0,
+            36.8
+          ],
+          [
+            36,
+            36.8
+          ]
+        ],
+        "label_pos": [
+          33.0,
+          36.8
+        ]
+      }
+    },
+    {
+      "id": "R2",
+      "source": "E2",
+      "target": "E3",
+      "relation": "inhibition",
+      "source_refs": [
+        "S1"
+      ],
+      "confidence": "high",
+      "is_feedback": false,
+      "route": {
+        "points": [
+          [
+            58,
+            36.8
+          ],
+          [
+            61.0,
+            36.8
+          ],
+          [
+            61.0,
+            36.8
+          ],
+          [
+            63.3,
+            36.8
+          ]
+        ],
+        "label_pos": [
+          61.0,
+          36.8
+        ]
+      }
+    }
+  ],
+  "groups": [],
+  "datasets": [],
+  "legend": {
+    "title": "Legend",
+    "items": [
+      {
+        "id": "L1",
+        "kind": "relation",
+        "ref": "activation",
+        "label": "Activation",
+        "color": "#0072B2"
+      },
+      {
+        "id": "L2",
+        "kind": "relation",
+        "ref": "inhibition",
+        "label": "Inhibition",
+        "color": "#D55E00"
+      }
+    ],
+    "geom": {
+      "x": 88.492,
+      "y": 11.6,
+      "w": 23.508,
+      "h": 17.8,
+      "title_y": 15.0,
+      "rows": [
+        {
+          "id": "L1",
+          "swatch_x": 90.492,
+          "swatch_y": 17.8,
+          "label_x": 98.492,
+          "label_y": 19.5
+        },
+        {
+          "id": "L2",
+          "swatch_x": 90.492,
+          "swatch_y": 23.2,
+          "label_x": 98.492,
+          "label_y": 24.9
+        }
+      ]
+    }
+  },
+  "annotations": [
+    {
+      "id": "A1",
+      "kind": "panel_label",
+      "text": "A",
+      "position": {
+        "x_mm": 8,
+        "y_mm": 10.9
+      }
+    }
+  ],
+  "uncertainties": [],
+  "change_records": [],
+  "layout": {
+    "engine": "hierarchical",
+    "direction": "LR",
+    "rank_sep_mm": 16,
+    "node_sep_mm": 8,
+    "padding_mm": 3
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "sci_fig.entity_vocab/1.0",
+  "note": "实体受控类型与形状映射。shape 决定默认外形；rounded=圆角矩形，box=矩形，ellipse=椭圆，hexagon=六边形，diamond=菱形，cylinder=圆柱（数据库/储存），can=罐形。默认尺寸单位 mm，可被标签长度自动撑开。",
+  "entity_types": {
+    "gene": {
+      "shape": "box", "sbgn": "entity (nucleic acid)", "label_style": "italic_off",
+      "default_w_mm": 20, "default_h_mm": 9,
+      "triggers": ["gene", "基因", "locus", "等位基因"]
+    },
+    "protein": {
+      "shape": "rounded", "sbgn": "entity (macromolecule)", "label_style": "plain",
+      "default_w_mm": 22, "default_h_mm": 9,
+      "triggers": ["protein", "蛋白", "蛋白质", "蛋白因子"]
+    },
+    "enzyme": {
+      "shape": "rounded", "sbgn": "entity (macromolecule, catalyst)", "label_style": "plain",
+      "default_w_mm": 22, "default_h_mm": 9,
+      "triggers": ["enzyme", "kinase", "phosphatase", "酶", "激酶", "磷酸酶"]
+    },
+    "receptor": {
+      "shape": "rounded", "sbgn": "entity (receptor)", "label_style": "plain",
+      "default_w_mm": 24, "default_h_mm": 9,
+      "triggers": ["receptor", "受体"]
+    },
+    "ligand": {
+      "shape": "ellipse", "sbgn": "entity", "label_style": "plain",
+      "default_w_mm": 20, "default_h_mm": 9,
+      "triggers": ["ligand", "配体", "信号分子"]
+    },
+    "small_molecule": {
+      "shape": "hexagon", "sbgn": "simple chemical", "label_style": "plain",
+      "default_w_mm": 18, "default_h_mm": 9,
+      "triggers": ["small molecule", "chemical", "compound", "drug", "inhibitor compound", "小分子", "化合物", "药物"]
+    },
+    "metabolite": {
+      "shape": "hexagon", "sbgn": "simple chemical", "label_style": "plain",
+      "default_w_mm": 18, "default_h_mm": 9,
+      "triggers": ["metabolite", "代谢物", "底物", "substrate"]
+    },
+    "rna": {
+      "shape": "box", "sbgn": "entity (nucleic acid)", "label_style": "plain",
+      "default_w_mm": 20, "default_h_mm": 9,
+      "triggers": ["mRNA", "RNA", "transcript", "转录本"]
+    },
+    "dna": {
+      "shape": "box", "sbgn": "entity (nucleic acid)", "label_style": "plain",
+      "default_w_mm": 20, "default_h_mm": 9,
+      "triggers": ["DNA", "promoter", "启动子", "染色质"]
+    },
+    "complex": {
+      "shape": "cut_corner", "sbgn": "complex", "label_style": "plain",
+      "default_w_mm": 26, "default_h_mm": 11,
+      "triggers": ["complex", "复合物", "复合体"]
+    },
+    "process": {
+      "shape": "ellipse", "sbgn": "process", "label_style": "plain",
+      "default_w_mm": 24, "default_h_mm": 10,
+      "triggers": ["process", "reaction", "过程", "反应", "步骤"]
+    },
+    "phenotype": {
+      "shape": "diamond", "sbgn": "phenotype", "label_style": "plain",
+      "default_w_mm": 24, "default_h_mm": 12,
+      "triggers": ["phenotype", "表型", "outcome", "效应结局", "临床终点"]
+    },
+    "compartment": {
+      "shape": "container", "sbgn": "compartment", "label_style": "plain",
+      "default_w_mm": 60, "default_h_mm": 40,
+      "triggers": ["compartment", "区室", "细胞器", "膜结构"]
+    },
+    "cell": {
+      "shape": "container", "sbgn": "compartment (cell)", "label_style": "plain",
+      "default_w_mm": 80, "default_h_mm": 55,
+      "triggers": ["cell", "细胞"]
+    },
+    "tissue": {
+      "shape": "container", "sbgn": "compartment (tissue)", "label_style": "plain",
+      "default_w_mm": 80, "default_h_mm": 55,
+      "triggers": ["tissue", "组织", "器官", "organ"]
+    },
+    "pathway_node": {
+      "shape": "rounded", "sbgn": "generic node", "label_style": "plain",
+      "default_w_mm": 22, "default_h_mm": 9,
+      "triggers": ["pathway", "通路节点", "module"]
+    }
+  },
+  "shape_catalog": {
+    "box": "直角矩形：基因/核酸类",
+    "rounded": "圆角矩形：蛋白质等大分子",
+    "ellipse": "椭圆：过程/配体",
+    "hexagon": "六边形：小分子/代谢物（SBGN simple chemical）",
+    "diamond": "菱形：表型/结局",
+    "cut_corner": "切角矩形：复合物（SBGN complex）",
+    "container": "容器：区室/细胞/组织，仅作分组背景，不参与端头连接"
+  }
+}
