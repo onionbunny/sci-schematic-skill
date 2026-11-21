@@ -1,0 +1,2 @@
+https://github.com/onionbunny/sci-schematic-skill
+SKILL.md
